@@ -1,4 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme selection
+    const themeOptions = document.querySelectorAll('.theme-option');
+    const htmlElement = document.documentElement;
+    
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('gohuman-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+    }
+    
+    // Theme switching functionality
+    themeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const selectedTheme = this.getAttribute('data-theme');
+            htmlElement.setAttribute('data-theme', selectedTheme);
+            localStorage.setItem('gohuman-theme', selectedTheme);
+            
+            // Close theme options
+            const themeSelector = document.querySelector('.theme-options');
+            themeSelector.style.display = 'none';
+            
+            // Reopen after a brief timeout to allow for animation
+            setTimeout(() => {
+                themeSelector.style.display = '';
+            }, 300);
+        });
+    });
+    
+    // Toggle theme options with button
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeOptionsMenu = document.querySelector('.theme-options');
+    
+    themeToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (themeOptionsMenu.style.display === 'flex') {
+            themeOptionsMenu.style.display = 'none';
+        } else {
+            themeOptionsMenu.style.display = 'flex';
+        }
+    });
+    
+    // Close theme options when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.theme-selector')) {
+            themeOptionsMenu.style.display = 'none';
+        }
+    });
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a');
     
