@@ -1,0 +1,98 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Mobile navigation toggle (for future implementation)
+    
+    // FAQ items expandable (can be enhanced later)
+    const faqItems = document.querySelectorAll('.faq-item h3');
+    
+    faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+    
+    // Funding dropdown toggle
+    const fundingBtn = document.querySelector('.funding-btn');
+    if (fundingBtn) {
+        fundingBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdown = this.nextElementSibling;
+            dropdown.style.opacity = dropdown.style.opacity === '1' ? '0' : '1';
+            dropdown.style.visibility = dropdown.style.visibility === 'visible' ? 'hidden' : 'visible';
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.funding-options')) {
+                const dropdown = document.querySelector('.funding-dropdown');
+                if (dropdown) {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                }
+            }
+        });
+    }
+    
+    // Simple form validation (for when a contact form is added)
+    
+    // Animation on scroll (for future enhancement)
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.feature, .project-card, .option, .success-story, .founder-quote');
+        
+        elements.forEach(element => {
+            const position = element.getBoundingClientRect();
+            
+            // If element is in viewport
+            if(position.top < window.innerHeight && position.bottom >= 0) {
+                element.classList.add('show');
+            }
+        });
+    }
+    
+    // Call on scroll
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Call once on page load
+    animateOnScroll();
+    
+    // Auto-hide announcement banner after 5 seconds
+    setTimeout(function() {
+        const banner = document.querySelector('.announcement-banner');
+        if (banner) {
+            banner.style.height = banner.offsetHeight + 'px';
+            banner.style.overflow = 'hidden';
+            
+            setTimeout(function() {
+                banner.style.height = '0';
+                banner.style.padding = '0';
+                banner.style.transition = 'all 0.5s ease';
+                
+                setTimeout(function() {
+                    banner.style.display = 'none';
+                }, 500);
+            }, 100);
+        }
+    }, 5000);
+}); 
