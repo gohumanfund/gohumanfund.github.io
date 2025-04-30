@@ -3,10 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeOptions = document.querySelectorAll('.theme-option');
     const htmlElement = document.documentElement;
     
-    // Load saved theme from localStorage
+    // Available themes array
+    const availableThemes = ['purple', 'blue', 'green', 'red', 'orange', 'yellow', 'dark-purple', 'dark-blue', 'dark-green'];
+    
+    // Load saved theme from localStorage or use a random theme
     const savedTheme = localStorage.getItem('gohuman-theme');
     if (savedTheme) {
         htmlElement.setAttribute('data-theme', savedTheme);
+    } else {
+        // Select a random theme
+        const randomTheme = availableThemes[Math.floor(Math.random() * availableThemes.length)];
+        htmlElement.setAttribute('data-theme', randomTheme);
     }
     
     // Theme switching functionality
