@@ -4,140 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Human Fund</title>
-    <meta name="description" content="A micro-seed fund that invested in humans building useful stuff for humanity.">
+    <meta name="description" content="A micro-seed fund that invested in humans building useful things for humanity.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <div class="container header-inner">
+        <div class="header-inner">
             <a href="#" class="logo">Go Human Fund</a>
             <nav id="nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#stories">Stories</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#outcomes">Outcomes</a>
+                <a href="#faq">FAQ</a>
             </nav>
-            <div class="header-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                </button>
-                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>We invested in humans building useful stuff for humanity.</h1>
-            <p class="hero-sub">A micro-seed fund that backed early-stage founders with small checks and big belief. Now closed, but our founders keep building.</p>
-        </div>
-    </section>
+    <main>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>What We Did</h2>
-            <p>We knew the struggle of starting from zero: a great idea, the drive to execute, but no capital. Go Human Fund gave micro-seed checks to help founders take their first steps.</p>
-            <div class="card-grid cols-4">
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h3>Micro-seed Funding</h3>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Mentorship</h3>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
-                    <h3>Network Access</h3>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <h3>Founder Support</h3>
-                </div>
-            </div>
-            <div class="notice">
-                <p><strong>April 2025:</strong> The Go Human Fund has completed its mission. We're no longer providing new funding, but we continue to celebrate the success of our supported founders.</p>
-            </div>
-        </div>
-    </section>
+        <section class="hero">
+            <span class="hero-tag">Micro-seed fund &middot; 2023&ndash;2025</span>
+            <h1>We believed in people<br>before anyone else did.</h1>
+            <p>Go Human Fund made the smallest first checks to founders<br class="hide-mobile"> at the very beginning of their journey. The fund is now closed,<br class="hide-mobile"> but the founders keep building.</p>
+        </section>
 
-    <section id="projects" class="section section-alt">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="card-grid cols-3">
-                <div class="card">
-                    <h3>Sodium BMS</h3>
-                    <p>Researching sodium battery science for cost-effective electric vehicle BMS networks.</p>
-                    <span class="card-meta">Vibhuti Bafna (Shilpa)</span>
-                </div>
-                <div class="card">
-                    <h3>Leapflow</h3>
+        <div class="divider"></div>
+
+        <section class="stats">
+            <div class="stat">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Founders backed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">$100</span>
+                <span class="stat-label">Typical first check</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Countries reached</span>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="portfolio">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2>Companies we backed</h2>
+            </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-item">
+                    <div class="portfolio-name">Sodium BMS</div>
+                    <p>Sodium battery science for cost-effective electric vehicle BMS networks.</p>
+                    <span class="portfolio-founder">Vibhuti Bafna</span>
+                </article>
+                <article class="portfolio-item">
+                    <div class="portfolio-name">Leapflow</div>
                     <p>AI-driven agents for workflow automation and business scalability.</p>
-                    <span class="card-meta">Suhas Sumukh</span>
-                </div>
-                <div class="card">
-                    <h3>Zip Notary</h3>
-                    <p>Remote online notarization SaaS for modernizing notary services.</p>
-                    <span class="card-meta">Ray McDonald</span>
-                </div>
+                    <span class="portfolio-founder">Suhas Sumukh</span>
+                </article>
+                <article class="portfolio-item">
+                    <div class="portfolio-name">Zip Notary</div>
+                    <p>Remote online notarization SaaS modernizing notary services.</p>
+                    <span class="portfolio-founder">Ray McDonald</span>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="stories" class="section">
-        <div class="container">
-            <h2>Where They Are Now</h2>
-            <p>Our founders have gone on to raise follow-on funding, build communities, and push their fields forward.</p>
-            <div class="card-grid cols-3">
-                <div class="card">
-                    <h3>Advik Kooper</h3>
-                    <p>Raised from Peter Thiel's 1517 Fund for his Solana platform <a href="http://exerton.xyz" target="_blank" rel="noopener">Exerton</a>.</p>
-                </div>
-                <div class="card">
-                    <h3>Sur Naik</h3>
-                    <p>Secured a $20,000 grant from Emergent Ventures for his electronics prototyping system.</p>
-                </div>
-                <div class="card">
-                    <h3>Emma Obadoni</h3>
-                    <p>Built Tech Family, a 50+ member community teaching Nigerians and other Africans about technology.</p>
-                </div>
-                <div class="card">
-                    <h3>Pablo Perez</h3>
-                    <p>Advancing in the field of Machine Learning with promising developments.</p>
-                </div>
-                <div class="card">
-                    <h3>Khadija Challoey</h3>
-                    <p>Making strides in Physics research and education.</p>
-                </div>
-                <div class="card card-muted">
-                    <h3>And Many More</h3>
-                    <p>We supported dozens of talented individuals who continue to grow in their fields.</p>
-                </div>
+        <section id="outcomes">
+            <div class="section-header">
+                <span class="section-tag">Outcomes</span>
+                <h2>Where they are now</h2>
             </div>
-        </div>
-    </section>
+            <div class="outcomes-list">
+                <div class="outcome">
+                    <div class="outcome-name">Advik Kooper</div>
+                    <div class="outcome-detail">Raised from Peter Thiel's 1517 Fund for <a href="http://exerton.xyz" target="_blank" rel="noopener">Exerton</a>, a Solana platform for young founders.</div>
+                </div>
+                <div class="outcome">
+                    <div class="outcome-name">Sur Naik</div>
+                    <div class="outcome-detail">$20,000 grant from Emergent Ventures for his electronics prototyping system.</div>
+                </div>
+                <div class="outcome">
+                    <div class="outcome-name">Emma Obadoni</div>
+                    <div class="outcome-detail">Built Tech Family, a 50+ member community teaching technology across Africa.</div>
+                </div>
+                <div class="outcome">
+                    <div class="outcome-name">Pablo Perez</div>
+                    <div class="outcome-detail">Advancing in Machine Learning research with promising developments.</div>
+                </div>
+                <!-- <div class="outcome">
+                    <div class="outcome-name">Khadija Challoey</div>
+                    <div class="outcome-detail">Making strides in Physics research and education.</div>
+                </div> -->
+            </div>
+        </section>
 
-    <section class="section section-cta">
-        <div class="container">
-            <h2>Building Something?</h2>
-            <p>We're no longer funding, but the ecosystem is full of people who want to back ambitious founders. Here are some places to start.</p>
-            <div class="link-grid">
+        <section class="cta">
+            <h2>For founders still looking</h2>
+            <p>We're no longer writing checks, but the ecosystem has never been richer. These funds back early founders like we did.</p>
+            <div class="cta-links">
                 <a href="https://www.1517fund.com" target="_blank" rel="noopener">1517 Fund</a>
                 <a href="https://www.mercatus.org/emergent-ventures" target="_blank" rel="noopener">Emergent Ventures</a>
                 <a href="https://www.ycombinator.com" target="_blank" rel="noopener">Y Combinator</a>
@@ -145,46 +118,51 @@
                 <a href="https://pioneer.app" target="_blank" rel="noopener">Pioneer</a>
                 <a href="https://foundersfund.com" target="_blank" rel="noopener">Founders Fund</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="faq" class="section section-alt">
-        <div class="container">
-            <h2>FAQ</h2>
+        <div class="divider"></div>
+
+        <section id="faq">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2>Common questions</h2>
+            </div>
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>What was your typical investment amount?</summary>
-                    <p>We typically made an initial investment of $100 in early-stage projects.</p>
+                    <summary>What was the typical investment?</summary>
+                    <p>An initial check of $100 to help founders take their very first step.</p>
                 </details>
                 <details class="faq-item">
                     <summary>Did you take equity?</summary>
-                    <p>It depended on the project. We were flexible and worked with founders to find the best arrangement.</p>
+                    <p>It varied by project. We worked with each founder to find the right arrangement.</p>
                 </details>
                 <details class="faq-item">
-                    <summary>Why did Go Human Fund close?</summary>
-                    <p>The fund was personally financed and we didn't pursue raising capital from limited partners. Despite this, we're proud of the impact we made and the continued success of our founders.</p>
+                    <summary>Why did the fund close?</summary>
+                    <p>The fund was personally financed. Rather than raise from LPs, we chose to close after completing our initial mission.</p>
                 </details>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section section-letter">
-        <div class="container">
-            <div class="letter">
-                <h2>A Note from the Founder</h2>
-                <p>Due to financial constraints and the challenges of securing long-term support, I made the difficult decision to conclude the fund's operations. While I personally financed much of our journey and learned valuable lessons about sustainable fundraising, I am profoundly grateful for the remarkable individuals and projects we were able to support.</p>
-                <p>My experiences since, including work on the Truffle AI Computer and other ventures, have only reinforced my belief in the importance of nurturing emerging talent in technology. Although the Go Human Fund is no longer active, my commitment to mentoring and uplifting the next generation of innovators remains unwavering.</p>
-                <p class="letter-sign">With sincere appreciation,<br><strong>Jacob Valdez</strong></p>
+        <div class="divider"></div>
+
+        <section class="letter">
+            <span class="section-tag">From the founder</span>
+            <div class="letter-body">
+                <p>I started Go Human Fund because I believed the earliest stage of building &mdash; when you have nothing but an idea and determination &mdash; deserved more support than it got. We couldn't write large checks, but we could be the first people to say <em>"I believe in you."</em></p>
+                <p>The fund is closed now, but the conviction hasn't changed. Every founder we backed taught me something about resilience, creativity, and what it means to build for others. I'm grateful to each of them.</p>
+                <div class="letter-sign">
+                    <span class="letter-author">Jacob Valdez</span>
+                    <span class="letter-role">Founder, Go Human Fund</span>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <footer>
-        <div class="container footer-inner">
-            <div class="footer-info">
-                <p class="footer-name">Go Human Fund</p>
-                <p class="footer-legal">Formerly ComputaCombinator LLC (DE)</p>
-            </div>
+        <div class="footer-inner">
+            <span class="footer-name">Go Human Fund</span>
+            <span class="footer-legal">Formerly ComputaCombinator LLC &middot; Delaware</span>
             <div class="footer-links">
                 <a href="https://twitter.com/gohumanfund" target="_blank" rel="noopener">Twitter</a>
                 <a href="https://linkedin.com/company/gohumanfund" target="_blank" rel="noopener">LinkedIn</a>
